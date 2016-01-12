@@ -1,0 +1,31 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <description>This is a simple application to test clustering</description>
+    <display-name>Hello World by Pagio</display-name>
+
+    <distributable/>
+
+    <servlet>
+        <servlet-name>HelloWorld</servlet-name>
+        <servlet-class>org.jboss.as.quickstarts.helloworld.HelloWorldServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>City</servlet-name>
+        <servlet-class>org.jboss.as.quickstarts.helloworld.CityServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>HelloWorld</servlet-name>
+        <url-pattern>/HelloWorld</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>City</servlet-name>
+        <url-pattern>/City</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
